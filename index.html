@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f1e9"><meta name="description" content="Diseña una lámina original y encuentra su lugar. Un estudio de arte y luz, sin cuentas ni prisas.">
+  <title>Pliego — arte y luz para tu espacio</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg"><link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#studio">Ir al estudio</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Pliego, inicio"><span class="brand-mark" aria-hidden="true">p</span>pliego<span class="brand-dot">.</span></a>
+    <span class="header-note">Objetos sencillos. Espacios tuyos.</span>
+    <button class="button subtle" id="open-library">Mis versiones <span id="library-count" class="count">0</span></button>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span aria-hidden="true">✳</span> TU PEQUEÑO ESTUDIO DE ARTE Y LUZ</p>
+      <h1 id="page-title">Un espacio que <em>se siente tuyo.</em></h1>
+      <p>Empieza por una lámina. Juega con el color, encuentra la luz y mira cómo encaja todo.</p>
+    </section>
+    <section class="studio" id="studio" aria-label="Estudio de diseño">
+      <aside class="controls">
+        <div class="chapter-nav" role="tablist" aria-label="Qué quieres diseñar">
+          <button role="tab" id="art-tab" aria-controls="art-panel" aria-selected="true" tabindex="0">01 <span>Láminas</span></button>
+          <button role="tab" id="lamp-tab" aria-controls="lamp-panel" aria-selected="false" tabindex="-1">02 <span>Lámparas</span></button>
+        </div>
+        <form id="project-form">
+          <div class="control-group name-group"><label for="project-title">NOMBRE DEL ESPACIO</label><input id="project-title" name="title" maxlength="80" required value="Un rincón en calma" autocomplete="off"></div>
+          <div id="art-panel" role="tabpanel" aria-labelledby="art-tab">
+            <fieldset class="control-group"><legend>LA COMPOSICIÓN</legend><div id="style-options" class="style-options"></div></fieldset>
+            <fieldset class="control-group"><legend>UNA PALETA</legend><div id="palette-options" class="palette-options"></div><p id="palette-name" class="small-note">Arcilla</p></fieldset>
+            <div class="two-controls control-group"><label>Tamaño de lámina<select id="art-size"><option value="20x30">20 × 30 cm</option><option value="30x40">30 × 40 cm</option><option value="40x50">40 × 50 cm</option><option value="50x70" selected>50 × 70 cm</option><option value="70x100">70 × 100 cm</option></select></label><label>Margen de papel<select id="art-margin"><option value="0">Sin margen</option><option value="8" selected>Equilibrado</option><option value="12">Generoso</option></select></label></div>
+            <div class="variation-row"><span>Una forma de verlo.<br><small>Hay muchas más.</small></span><button type="button" id="new-variation" class="button subtle">↻ Otra versión</button></div>
+          </div>
+          <div id="lamp-panel" role="tabpanel" aria-labelledby="lamp-tab" hidden>
+            <div class="control-group"><label for="lamp-kind">EL TIPO DE LUZ</label><select id="lamp-kind"><option value="floor">Lámpara de pie</option><option value="pendant">Lámpara colgante</option><option value="table">Lámpara de sobremesa</option></select></div>
+            <div class="control-group"><label for="lamp-height"><span id="lamp-height-label">Altura</span> <output id="lamp-height-value">160 cm</output></label><input type="range" id="lamp-height" min="110" max="190" value="160"></div>
+            <div class="control-group"><label for="lamp-diameter">Diámetro de pantalla <output id="lamp-diameter-value">40 cm</output></label><input type="range" id="lamp-diameter" min="20" max="70" value="40"></div>
+            <div class="two-controls control-group"><label>Tono de luz<select id="lamp-warmth"><option value="warm">Cálida</option><option value="neutral">Neutra</option></select></label><label>Posición<select id="lamp-side"><option value="right">A la derecha</option><option value="left">A la izquierda</option></select></label></div>
+            <label class="checkbox-row"><input type="checkbox" id="lamp-visible" checked> Mostrar lámpara en el espacio</label>
+            <p class="small-note lamp-note">Una idea de forma, tamaño y color. El halo de luz es ilustrativo; no calcula la iluminación real.</p>
+          </div>
+          <details class="room-settings"><summary>Tu pared, a tu medida <span aria-hidden="true">+</span></summary><div class="details-body">
+            <div class="two-controls"><label>Ancho (cm)<input id="room-width" type="number" min="180" max="500" step="1" value="320" required></label><label>Alto (cm)<input id="room-height" type="number" min="220" max="320" step="1" value="250" required></label></div>
+            <div class="two-controls"><label>Color de pared<input id="room-wall" type="color" value="#e8e2d7"></label><label>Marco<select id="room-frame"><option value="oak">Roble</option><option value="black">Negro</option><option value="none">Sin marco</option></select></label></div>
+          </div></details>
+        </form>
+        <div class="save-area"><button class="button primary" id="save-version">Guardar una versión <span aria-hidden="true">↗</span></button><p>Solo en este navegador. También puedes descargar una copia del proyecto.</p></div>
+      </aside>
+      <div class="workspace">
+        <div class="workspace-top"><p><span class="live-dot" aria-hidden="true"></span> TU BOCETO <span id="dirty-label">SIN GUARDAR</span></p><div class="view-switch" role="group" aria-label="Vista del diseño"><button id="view-room" aria-pressed="true">En tu espacio</button><button id="view-print" aria-pressed="false">Solo lámina</button></div></div>
+        <div id="preview" class="preview room-view" aria-live="off"></div>
+        <div class="preview-caption"><p id="composition-caption">Sol de tarde / Arcilla</p><p id="size-caption">Lámina 50 × 70 cm</p></div>
+        <div class="export-bar"><div><p>De la idea al papel.</p><span>SVG a tamaño real · PNG de vista previa</span></div><div class="export-actions"><button class="button outline" id="export-svg">Descargar SVG <span aria-hidden="true">↓</span></button><button class="button outline" id="export-png">PNG <span aria-hidden="true">↓</span></button><button class="button icon-button" id="open-export" aria-label="Más opciones de descarga">•••</button></div></div>
+      </div>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <section class="how-it-works" aria-label="Cómo funciona"><div><span>01 / CREA</span><h2>Arte original, sin ruido.</h2><p>Tres composiciones generativas. Cambia la paleta, el formato o la versión hasta encontrar la tuya.</p></div><div><span>02 / IMAGINA</span><h2>Dale un lugar.</h2><p>La lámina y la lámpara guardan proporción con las medidas de tu pared. Un esquema, no una foto.</p></div><div><span>03 / CONSERVA</span><h2>Llévate tu idea.</h2><p>Guarda versiones aquí o descarga el proyecto. El SVG conserva las medidas; el PNG tiene 2400 píxeles de alto.</p></div></section>
+  </main>
+  <footer><a class="brand" href="./">pliego.</a><p>Hecho para imaginar. Sin cuentas, sin anuncios, sin prisas.</p><a href="about.html">Acerca del estudio y tus datos ↗</a></footer>
+  <dialog id="library-dialog" aria-labelledby="library-title"><div class="dialog-header"><div><p class="eyebrow">TU BIBLIOTECA LOCAL</p><h2 id="library-title">Ideas que guardas.</h2></div><button class="close-dialog" aria-label="Cerrar biblioteca">×</button></div><p class="dialog-description">Cada guardado es una versión nueva. Abrir una no modifica las demás.</p><div id="library-list"></div><div class="dialog-actions"><button class="button outline" id="refresh-library">Actualizar biblioteca</button><button class="button outline" id="recover-library" hidden>Descargar datos originales</button></div><p class="dialog-status" id="library-status" role="status"></p></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-header"><div><p class="eyebrow">TU IDEA, CONTIGO</p><h2 id="export-title">Guarda una copia.</h2></div><button class="close-dialog" aria-label="Cerrar descargas">×</button></div><div class="download-cards"><button id="export-json"><strong>Proyecto editable <span>↗</span></strong><span>Un archivo JSON para volver a abrir esta idea en Pliego, con lámina, espacio y lámpara.</span></button><button id="export-room"><strong>Esquema del espacio <span>↗</span></strong><span>La composición completa en SVG. La luz es una ilustración, no una medición.</span></button></div><label class="import-label" for="import-file">O abre una copia de un proyecto<input type="file" id="import-file" accept="application/json,.json"></label><p id="import-status" class="dialog-status" role="status"></p></dialog>
+  <dialog id="replace-dialog" aria-labelledby="replace-title"><div class="dialog-header"><h2 id="replace-title">¿Abrir la otra idea?</h2><button class="close-dialog" aria-label="Cancelar cambio">×</button></div><p>El boceto que tienes abierto no está guardado. Puedes cancelar y guardar una versión o descargarlo antes de cambiar.</p><div class="dialog-actions"><button id="cancel-replace" class="button outline">Conservar mi boceto</button><button id="confirm-replace" class="button primary">Abrir la otra idea</button></div></dialog>
+  <noscript><p class="noscript">Activa JavaScript para usar el estudio. Los diseños se preparan en tu navegador.</p></noscript>
+</body>
+</html>

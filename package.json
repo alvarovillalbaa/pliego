@@ -1,0 +1,15 @@
+{
+  "name": "pliego",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Un estudio local de láminas y luz para imaginar tu espacio.",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.mjs && node --check core.mjs && node --check art.mjs && node --check downloads.mjs && node --check storage.mjs && node --check scripts/serve.mjs",
+    "test": "node --test tests/unit/core.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
