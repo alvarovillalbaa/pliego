@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check app.mjs && node --check core.mjs && node --check art.mjs && node --check downloads.mjs && node --check storage.mjs && node --check scripts/serve.mjs",
+    "check": "node --check app.mjs && node --check core.mjs && node --check art.mjs && node --check downloads.mjs && node --check storage.mjs && node --check scripts/serve.mjs && node --check tests/e2e/studio.mjs",
     "test": "node --test tests/unit/core.test.mjs"
   },
   "engines": { "node": ">=22" }
