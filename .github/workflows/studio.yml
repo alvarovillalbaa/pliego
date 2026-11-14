@@ -5,7 +5,7 @@ permissions:
   contents: read
 jobs:
   studio:
-    if: github.repository == 'alvarovillalbaa/pliego' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/qa/pliego-studio-20261114-1'
+    if: github.repository == 'alvarovillalbaa/pliego' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/qa/pliego-studio-20261114-2'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -20,7 +20,7 @@ jobs:
         env:
           PLIEGO_OUTPUT: ${{ runner.temp }}/pliego-studio-originals
           PLIEGO_BASE_URL: https://pliego-zeta.vercel.app
-          PLIEGO_CASES: B01,B02,B03,B04
+          PLIEGO_CASES: B04
         run: python3 tests/scripts/qualify.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()

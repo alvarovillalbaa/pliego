@@ -67,7 +67,10 @@ def execute(name, args, timeout):
 
 try:
     execute("versions", ["node", "--version"], 10)
-    execute("tools", ["npm", "install", "--prefix", str(scratch / "tools"), "--ignore-scripts", "--no-audit", "--no-fund", "playwright@1.56.1"], 240)
+    (scratch / "tools").mkdir()
+    for name in ("package.json", "package-lock.json"):
+        shutil.copyfile(repo / "tests/fixtures/tools" / name, scratch / "tools" / name)
+    execute("tools", ["npm", "ci", "--prefix", str(scratch / "tools"), "--ignore-scripts", "--no-audit", "--no-fund"], 240)
     shutil.copyfile(scratch / "tools/package-lock.json", output / "tools-lock.json")
     execute("chromium", ["node", str(scratch / "tools/node_modules/playwright/cli.js"), "install", "chromium"], 240)
     env["PLIEGO_PLAYWRIGHT"] = str(scratch / "tools/node_modules/playwright/index.mjs")

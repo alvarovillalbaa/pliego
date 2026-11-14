@@ -39,3 +39,12 @@ Real print/color/manufacturing, physical lamps/lighting, generative AI, Safari/
 Firefox/physical devices, screen reader/performance/hostile races and all-user
 browser compatibility remain separate from these focused journeys. No claim of
 orders, complete interior-design commerce or full portfolio completion.
+
+After all four passed in43538385207, screenshot inspection found the authored
+quota failure showing raw native text. The changed storage boundary maps quota/
+security DOM exceptions to plain Spanish while preserving the same draft/export
+behavior. Standing authorization covers a second distinct20min free packet on
+qa/pliego-studio-20261114-2, B04 only with a stronger message assertion. Carry
+B01–B03 and24 core identities from their originals; do not replay them. Pin the
+first tool resolution for npm ci. Deploy the exact changed source, verify fresh
+public body hashes, retain both receipts and retire both exact QA refs/control.

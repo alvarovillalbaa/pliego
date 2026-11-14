@@ -111,6 +111,7 @@ const cases = [
     assert.equal(await page.locator('img').count(), 0); assert.equal(await page.evaluate(() => globalThis.__authoredExecuted), undefined);
     await page.evaluate(key => { localStorage.setItem(key, '{"version":1,"entries":[]}'); const original = Storage.prototype.setItem; Storage.prototype.setItem = function(k, v) { if (k === key) throw new DOMException('Authored quota refusal', 'QuotaExceededError'); return original.call(this, k, v); }; }, LIBRARY_KEY);
     await page.locator('#save-version').click(); await waitFor(async () => (await page.locator('#status').textContent()).includes('Tu boceto sigue abierto'), 'storage refusal');
+    assert.ok((await page.locator('#status').textContent()).includes('No queda espacio para otra versión')); assert.ok(!(await page.locator('#status').textContent()).includes('Authored quota refusal'));
     assert.equal(await value(page, 'project-title'), literal.title); assert.deepEqual(await entries(page), []); assert.equal(await page.evaluate(() => localStorage.getItem('pliego-authored-sentinel')), 'keep-b04');
     await more(page); const backup = await getDownload(page, () => page.locator('#export-json').click(), 'B04-preserved'); assert.equal(backup.toString(), projectBackup(literal)); await page.getByRole('button', { name: 'Cerrar descargas' }).click(); await screenshot(page, 'B04');
   }],
