@@ -1,0 +1,142 @@
+[
+  {
+    "path": ".github/workflows/studio.yml",
+    "bytes": 1162,
+    "sha256": "591b6a8facf31effeb0666951ce4a8c687e39c3907645312bc8829589cd3ad30"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 50,
+    "sha256": "43addffe1508255f8d428afcab1301e2cd7d59d50addb88f944a2beaab24e8e3"
+  },
+  {
+    "path": "404.html",
+    "bytes": 465,
+    "sha256": "007dd40b9e938412676381e5b50cba50aaf5f3e6c697b7c85c2764a808bb1b78"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 1684,
+    "sha256": "aa609d41522687459e9ea3439614eff47e33e1014c101af7623fdc9d2ed14e68"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1072,
+    "sha256": "7b67dcaf3272d2ec162c78712f8b10f1162ec2b1cd14003b2aa2c1902c2ba6e4"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1931,
+    "sha256": "6c52dcfd7458a0c02b07c5627d1913fade144b8dc388acde6452bd1cd4d2a4ee"
+  },
+  {
+    "path": "about.html",
+    "bytes": 2389,
+    "sha256": "6b1e033f983579ca900651b3ca9f4d5b924b420ef5cdde4917bc6574466b0214"
+  },
+  {
+    "path": "app.mjs",
+    "bytes": 13301,
+    "sha256": "d99c10c42436254397740fa9e40e82576701317d7419a8e1ac869f026dc58b9f"
+  },
+  {
+    "path": "art.mjs",
+    "bytes": 5774,
+    "sha256": "67b222a5a0e9b0d12e06db758cc35a7bd7776746d0671deb38863ff65bbdb84b"
+  },
+  {
+    "path": "core.mjs",
+    "bytes": 6055,
+    "sha256": "921dbb0d720f203b86e6b8df2d89e52d6525fa967eb39e2dcdd2a6934fd1c620"
+  },
+  {
+    "path": "docs/plans/2026/11-14/studio-checks.md",
+    "bytes": 3279,
+    "sha256": "5fc5a33673cb2e6ffeef9f915e91e655a80fe1542ea2f1c35001c2a1798c09a4"
+  },
+  {
+    "path": "docs/results/2026/11-14/core-checks.json",
+    "bytes": 2176,
+    "sha256": "e2d57facdb73fbd9a11f38b86ef073371f75238203758c7f5c33b0ff91863f93"
+  },
+  {
+    "path": "docs/specs/studio.md",
+    "bytes": 2431,
+    "sha256": "27cab7a6eeeb92b222ae05865b5242a4e5d7030ca4d500c27420ade7cb847e3d"
+  },
+  {
+    "path": "downloads.mjs",
+    "bytes": 2268,
+    "sha256": "a52dc4e37e6174658b40ae342003a89632c99bf1fb6672d9bf3b09733082fc7a"
+  },
+  {
+    "path": "icon.svg",
+    "bytes": 209,
+    "sha256": "6e670756b2daad044a65b6b228076c1941f8018690e99ab4059c88b110958a7b"
+  },
+  {
+    "path": "index.html",
+    "bytes": 9840,
+    "sha256": "5c18fea6330219cfb70c738ba285e17f648469dce668d53b89fcf697fd01f425"
+  },
+  {
+    "path": "package.json",
+    "bytes": 582,
+    "sha256": "e7d370b74eec1f8f1bdf82dd28fc143113dd4ab85b0042afe259bd59cd69bf7d"
+  },
+  {
+    "path": "scripts/build.mjs",
+    "bytes": 811,
+    "sha256": "5dcb528f603cd1e77c67e7be1966035a47d738bc4108f134d368057b64bfbbca"
+  },
+  {
+    "path": "scripts/public-files.mjs",
+    "bytes": 399,
+    "sha256": "5643f70ce5736a56471eef9f63c137c5fa1291b6f07353ea2d462ef546610756"
+  },
+  {
+    "path": "scripts/serve.mjs",
+    "bytes": 1867,
+    "sha256": "584e18789c2f1bea0896aa679d83409c5a6c31f370780bae3d0bed0f38ef367a"
+  },
+  {
+    "path": "storage.mjs",
+    "bytes": 2144,
+    "sha256": "d12353cbbd54f97a2f35b559f9dc8d2dd3ebdeff1263278ec88a87c84419043a"
+  },
+  {
+    "path": "styles.css",
+    "bytes": 14898,
+    "sha256": "01e662007251a5ae1de4ed61af60654616037a02937468bffdb5d8d442e55288"
+  },
+  {
+    "path": "tests/e2e/studio.mjs",
+    "bytes": 15896,
+    "sha256": "a601a131f58c8a486894d5170bc1e18dee6b6df9b804989ea93e7bc4f40be82a"
+  },
+  {
+    "path": "tests/fixtures/tools/package-lock.json",
+    "bytes": 1589,
+    "sha256": "447273ec67160e1ea7e05f3682381cc9cabe43e7cb6a62942f4f12641c8c990b"
+  },
+  {
+    "path": "tests/fixtures/tools/package.json",
+    "bytes": 56,
+    "sha256": "e767d260ef27070d5709c84d4e40db963dad49e58fc41f8569b8830f01ee2902"
+  },
+  {
+    "path": "tests/scripts/qualify.py",
+    "bytes": 4453,
+    "sha256": "e34e00a4ba8a9b9b2f8ba1dfd8f0034acd32cd225450bf1762bec0e16f3ed273"
+  },
+  {
+    "path": "tests/unit/core.test.mjs",
+    "bytes": 7886,
+    "sha256": "8659529e9c90dfabc3b2ff22d2550a0e65f32f7f54c91c94c382e016d29df891"
+  },
+  {
+    "path": "vercel.json",
+    "bytes": 621,
+    "sha256": "078399c9b1486dedc25f6bf6fd89a30bdc988ec9d99a8f5cbd523a645ca0d672"
+  }
+]

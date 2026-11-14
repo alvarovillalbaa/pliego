@@ -1,0 +1,28 @@
+{
+  "schema": "pliego.project",
+  "version": 1,
+  "project": {
+    "title": "Estudio B01",
+    "art": {
+      "style": "equilibrio",
+      "palette": "cobalto",
+      "variant": 8,
+      "size": "30x40",
+      "margin": 8
+    },
+    "room": {
+      "width": 320,
+      "height": 250,
+      "wall": "#e8e2d7",
+      "frame": "oak"
+    },
+    "lamp": {
+      "kind": "floor",
+      "visible": true,
+      "diameter": 40,
+      "height": 160,
+      "warmth": "warm",
+      "side": "right"
+    }
+  }
+}

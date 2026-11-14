@@ -23,3 +23,9 @@ Last updated: 2026-11-14
   Vercel serves a static output. Verify exact team/project/source and delivery.
 - Keep results in docs/results/YYYY/MM-DD; use apply_patch for edits, targeted
   syntax/core checks and git diff --check. Retire temporary CI after acceptance.
+
+The [14November qualification](docs/results/2026/11-14/studio.md) closes24 core
+identities and four hosted journeys across original sources. The initial four
+passed; after a native-error wording improvement only B04 reran with a stronger
+assertion. No routine replay, broad CI or source-only physical-product claim.
+Temporary control was disabled before removal and its exact two QA refs retired.
