@@ -1,5 +1,9 @@
 # Pliego
 
+<!-- project-family:start -->
+> **Project family:** [Web & Creative Apps](https://github.com/alvarovillalbaa#web-and-creative-apps) · **Area:** Design
+<!-- project-family:end -->
+
 Last updated: 2026-11-14
 
 A Spanish-first poster and lighting studio. Create original generative artwork,
